@@ -5,5 +5,23 @@
 {% endblock title %}
 
 {% block content %}
+
  Hi bro this is new app
-{% endblock content %}
+ <div class="grid grid-cols-3 gap-4 m-4">
+
+ {% for i in chais%}
+<div class="bg-blue-800 p-5">
+    <img class="rounded"src="{{i.image.url}}" alt="">
+    <h3 class="text-2xl font0bold">{{i.name}}</h3>
+    <a href="{% url "newapp_detail" i.id%}"> {% comment %} we use loop shit here as well ? need to learn this {% endcomment %}
+        <button 
+        type="button">
+        {{i.type}}-{{i.id}}
+       </button>
+       </a>
+</div>
+
+{% endfor  %}
+
+{% endblock %}
+
