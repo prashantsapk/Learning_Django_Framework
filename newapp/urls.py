@@ -21,6 +21,6 @@ from . import views
 urlpatterns = [
     path('',views.newapp,name="newapp"),
     path('<int:chai_id>/',views.newappdescription,name="newapp_detail"),
-    
+    path('chai_stores/',views.chai_store_view,name="chai_stores"),
 
 ]
